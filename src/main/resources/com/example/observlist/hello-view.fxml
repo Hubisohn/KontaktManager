@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane stylesheets="@css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.observlist.HelloController" >
+   <center>
+    <AnchorPane minHeight="0.0" minWidth="0.0">
+         <children>
+            <TableView fx:id="tableView" prefHeight="400.0" prefWidth="599.0" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Name">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="Vorname" />
+                  </cellValueFactory>
+                </TableColumn>
+                <TableColumn prefWidth="75.0" text="Nachname">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="Nachname" />
+                  </cellValueFactory>
+                </TableColumn>
+                  <TableColumn prefWidth="75.0" text="Alter">
+                  <cellValueFactory>
+                    <PropertyValueFactory property="Alter" />
+                  </cellValueFactory>
+                </TableColumn>
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+    <AnchorPane BorderPane.alignment="CENTER" styleClass="buttonbackground">
+         <children>
+            <HBox layoutX="14.0" layoutY="5.0" prefHeight="27.0" prefWidth="440.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onAddUserClick" text="Add User" />
+                  <Button mnemonicParsing="false" onAction="#onRemoveUserClick" text="Remove User">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onLoadFileClick" text="Load File">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#onSaveFileClick" text="Save">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
